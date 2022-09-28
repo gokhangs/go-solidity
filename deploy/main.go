@@ -57,7 +57,12 @@ func main() {
 	auth.GasLimit = uint64(3000000)
 	auth.Nonce = big.NewInt(int64(nonce))
 
-	contractadd, tx, _, err := todo.DeployTodo(auth, client)
+	//contractadd, tx, _, err := todo.DeployTodo(auth, client)
+	//if err != nil {
+	//	log.Fatal(err)
+	//}
+
+	contractadd, tx, _, err := todo.DeployTodoFactory(auth, client)
 	if err != nil {
 		log.Fatal(err)
 	}
