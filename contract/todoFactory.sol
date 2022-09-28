@@ -4,7 +4,7 @@ pragma solidity >=0.7.0 <0.9.0;
 
 import "./todo.sol";
 
-contract TodoFactory {
+contract TodoFactory is Todo {
 
 Todo[] public todoArray;
 
